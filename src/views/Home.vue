@@ -1,18 +1,61 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<div class="home">
+   <img id="home-bg-desktop" class="home-bg" src="images/pizza-desktop.jpg" />
+   <img id="home-bg-tablet" class="home-bg" src="images/pizza-tablet.jpg" />
+   <img id="home-bg-mobile" class="home-bg" src="images/pizza-mobile.jpg" />
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
-  }
+   name: 'Home',
+   components: {}
 }
 </script>
+
+<style scoped>
+/* Home Page */
+.navbar {
+   background: rgba(255, 255, 255, 0.5);
+}
+
+.home-bg {
+   width: 100%;
+   z-index: -1;
+   display: block;
+   margin-top: -100px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 500px) {
+   #home-bg-desktop {
+      display: none;
+   }
+
+   #home-bg-tablet {
+      display: none;
+   }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 501px) and (max-width: 960px) {
+   #home-bg-desktop {
+      display: none;
+   }
+
+   #home-bg-mobile {
+      display: none;
+   }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+   #home-bg-mobile {
+      display: none;
+   }
+
+   #home-bg-tablet {
+      display: none;
+   }
+}
+</style>
