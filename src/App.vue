@@ -106,6 +106,7 @@ body {
 
 .navbar {
    background-color: var(--white);
+   background: rgba(255, 255, 255, 0.5);
 }
 
 
