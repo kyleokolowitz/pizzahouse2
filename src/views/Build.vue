@@ -1,5 +1,6 @@
 <template>
 <div>
+   <Navbar />
    <center>
       <h1 id="title">Build Your Own</h1>
    </center>
@@ -77,8 +78,12 @@
 </template>
 
 <script>
+import Navbar from "../components/Navbar.vue"
 export default {
-   name: 'Pizza',
+   name: 'Build',
+   components: {
+      Navbar
+   },
    data() {
       return {
          id: this.$route.params.id,
@@ -106,6 +111,15 @@ export default {
 <style scoped>
 #product-pic {
    box-shadow: 0px 0px 0px grey;
+}
+
+.create-box {
+   padding: 0px;
+}
+
+.toppings-box {
+   column-count: 2;
+   column-gap: 1em;
 }
 
 #pizza-builder {

@@ -1,5 +1,6 @@
 <template>
 <div class="home">
+   <Navbar />
    <img id="home-bg-desktop" class="home-bg" src="images/pizza-desktop.jpg" />
    <img id="home-bg-tablet" class="home-bg" src="images/pizza-tablet.jpg" />
    <img id="home-bg-mobile" class="home-bg" src="images/pizza-mobile.jpg" />
@@ -7,23 +8,21 @@
 </template>
 
 <script>
+import Navbar from "../components/Navbar.vue"
 export default {
    name: 'Home',
-   components: {}
+   components: {
+      Navbar
+   }
 }
 </script>
 
 <style scoped>
-/* Home Page */
-.navbar {
-   background: rgba(255, 255, 255, 0.5);
-}
-
 .home-bg {
    width: 100%;
    z-index: -1;
    display: block;
-   margin-top: -100px;
+   margin-top: -130px;
 }
 
 /* Mobile Styles */

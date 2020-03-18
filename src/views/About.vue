@@ -1,5 +1,6 @@
 <template>
 <div>
+   <Navbar />
    <center>
       <h1>About</h1>
    </center>
@@ -14,9 +15,10 @@
       <div class="box word-box">
          <h3>Background</h3>
          <p>
-            The Pizza House has been around for over 30 years.
+            The Pizza House has been around for over 100 years.
             It was first founded by Mike who made the first pizza.
-            Over the past 30 years it has grown and become one of the most popular places to get pizza.
+            For the past 100 years, and the foreseeable future,
+            it has been the most popular places to get pizza in all of Provo.
          </p>
          <br>
          <h3>Location</h3>
@@ -36,7 +38,16 @@
 </div>
 </template>
 
-<style>
+<script>
+import Navbar from "../components/Navbar.vue"
+export default {
+   components: {
+      Navbar
+   }
+}
+</script>
+
+<style scoped>
 /* About */
 #profile-pic {
    width: 80%;
@@ -57,7 +68,6 @@
 .word-box {
    padding: 20px;
 }
-
 
 /* Mobile Styles */
 @media only screen and (max-width: 600px) {

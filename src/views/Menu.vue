@@ -1,5 +1,6 @@
 <template>
 <div>
+   <Navbar />
    <center>
       <h1>Specialty Pizzas</h1>
    </center>
@@ -25,8 +26,12 @@
 </template>
 
 <script>
+import Navbar from "../components/Navbar.vue"
 export default {
    name: 'Menu',
+   components: {
+      Navbar
+   },
    computed: {
       pizzas() {
          return this.$root.$data.pizzas;
@@ -35,9 +40,7 @@ export default {
 }
 </script>
 
-
 <style>
-/* Build */
 .pizza-name {
    text-align: center;
    margin-top: 15px;

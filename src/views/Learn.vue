@@ -1,5 +1,6 @@
 <template>
 <center>
+   <Navbar />
    <h1>Making The Perfect Pizza</h1>
 
 
@@ -34,6 +35,15 @@
 
 </center>
 </template>
+
+<script scoped>
+import Navbar from "../components/Navbar.vue"
+export default {
+   components: {
+      Navbar
+   }
+}
+</script>
 
 <style>
 /* Learn */
